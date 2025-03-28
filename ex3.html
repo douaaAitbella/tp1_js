@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercice 3</title>
+    <style>
+        button{
+            border-radius:2px;
+            border-width:1px;
+            cursor:pointer;
+            font-size:20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quiz interctif</h1>
+    <button onclick="lancerQuiz()">Démarrer le Quiz</button>
+    <script>
+        const QUESTIONS = [
+            ["Quelle est la capitale de la France ?", "Paris"],
+            ["Quelle est la capitale du Canada ? "," Ottawa"],
+            ["Quelle est la capitale du Japon ? ","Tokyo"],
+            ["Quelle est la capitale de l'Allemagne ?","Berlin"],
+            ["Quelle est la capitale du Brésil ? ","Brasilia"]
+        ];
+        function lancerQuiz(){
+            let score=0;
+            let reponse;
+            for( let i=0;i<QUESTIONS.length;i++){
+                reponse=prompt(QUESTIONS[i][0]);
+                if(reponse!==null && reponse.trim().toLowerCase()==QUESTIONS[i][1].toLowerCase()){
+                    alert('Reponse juste.');
+                    score++;
+                }
+                else{
+                    alert('Reponse fausse.');
+                }
+            }
+            alert('Vous avez répondu correctement à '+ score +' question(s) sur 5');
+        }
+
+    </script>
+    
+</body>
+</html>

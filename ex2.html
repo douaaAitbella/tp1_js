@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercie 2</title>
+</head>
+<body>
+    <script>
+        let nombreAleatoire = 1+Math.floor(Math.random()*10);
+        let nombre;
+        let tentatives =0;
+        do{
+            nombre =parseInt(prompt('Veuillez saisir un nombre entre 1 et 10:'));
+            tentatives++;
+            if(nombre<nombreAleatoire){
+                console.log('Le nombre que tu as saisi est trop petit!');
+            }
+            else if(nombre>nombreAleatoire){
+                console.log('Le nombre que tu as saisi est trop grand!');
+            }
+            else{
+                console.log('Bravo tu as trouve le nombre en ' + tentatives + ' tentatives.');
+            }
+        }while(nombre!==nombreAleatoire);
+    </script>
+    
+</body>
+</html>
